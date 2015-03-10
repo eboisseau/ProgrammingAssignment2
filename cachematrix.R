@@ -33,7 +33,7 @@ makeCacheMatrix <- function(input_matrix = matrix()) {
                 cached_inverse
         }
         
-        ## return a list made up of previous functions
+        ## return 'the cache': a list made up of previous functions
         list(get_original = funcGet, # "'name of the element' = 'function'"
              set_inverse = funcSetInverse,
              get_inverse = funcGetInverse
@@ -42,7 +42,14 @@ makeCacheMatrix <- function(input_matrix = matrix()) {
 }
 
 
-## Write a short comment describing this function
+
+## This function takes a "cache vector" as imput, and returns the inverse of the
+##    original matrix stored in the cache.
+        # First, the function read the inverse matrix stored in the cache
+        # If there is actually is such a matrix (and not 'NULL'), the function
+        #    returns the result.
+        # If not, the function computes the inverse, stores it in the cache, and
+        #    returns the result.
 
 cacheSolve <- function(input_cache, ...) {
         # 'read' the currently cached inverse: it is either the inverse of our 
