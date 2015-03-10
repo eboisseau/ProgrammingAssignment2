@@ -18,26 +18,25 @@ makeCacheMatrix <- function(input_matrix = matrix()) {
         #   nor in 'cacheSolve' function, nor in the assignment.
         
         # This function calls ('get') the input/original matrix stored in a cache
-        func_get <- function(){
+        funcGet <- function(){
                 input_matrix
         }
         
         # This function takes the inverse of a matrix as an argument, and stores
         #    it in the variable 'cached_inverse' of the parent environment
-        func_setInverse <- function(inverse){
+        funcSetInverse <- function(inverse){
                 cached_inverse <<-inverse
         }
         
         # This function returns the variable 'cached_inverse'
-        func_getInverse <- function(){
+        funcGetInverse <- function(){
                 cached_inverse
         }
         
         ## return a list made up of previous functions
-        list(set_original = func_set, # "'name of the element' = 'function'"
-             get_original = func_get,
-             set_inverse = func_setInverse,
-             get_inverse = func_getInverse
+        list(get_original = funcGet, # "'name of the element' = 'function'"
+             set_inverse = funcSetInverse,
+             get_inverse = funcGetInverse
         )
 
 }
