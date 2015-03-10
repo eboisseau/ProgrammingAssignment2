@@ -1,7 +1,13 @@
-# NB : work in progress
-
-## Put comments here that give an overall description of what your
-## functions do
+### Hi!
+### The two hereinbelow defined functions are complementary. The first one
+###    'makeCacheMatrix' creates the "cache" of the matrix given in argument: 
+###    this cache is a list made up of function that :
+###      - returns the original matrix (input argument)
+###      - stores the inverse in a variable of the parent environment
+###      - returns the inverse matrix
+###
+### The second take such a cache in argument, and it returns the inverse of the
+###    matrix, without computing it if it has already been done before.
 
 
 
