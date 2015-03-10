@@ -14,11 +14,8 @@ makeCacheMatrix <- function(input_matrix = matrix()) {
         # initialize the cached inverse of the input mtrx
         cached_inverse <- NULL 
         
-        # This function 
-        func_set <- function(arg = matrix()) {
-                input_matrix_B <<- arg
-                cached_inverse <<- NULL
-        }
+        # We deleted the 'set' function, since it is never used: neither here,
+        #   nor in 'cacheSolve' function, nor in the assignment.
         
         # This function calls ('get') the input/original matrix stored in a cache
         func_get <- function(){
